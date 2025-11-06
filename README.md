@@ -68,7 +68,17 @@ La siguiente gráfica (ensamblada) compara las matrices de confusión generadas 
 
 *(Ejecutar los notebooks individuales para ver cada matriz)*
 
-![Matrices de Confusión](img/plot_confusion_matrices.png)
+#### SVM
+
+![Matrices de Confusión - SVM](img/mc-svm.png)
+
+#### Árbol de Decisión
+
+![Matrices de Confusión - Árbol de Decisión](img/mc-arbol-decision.png)
+
+#### Regresión Logística
+
+![Matrices de Confusión - Regresión Logística](img/mc-regresion-logistica.png)
 
 ### 5.3. Comparación de Métricas (Gráfico de Barras)
 
@@ -76,7 +86,7 @@ Este gráfico de barras (ensamblado) permite una comparación directa del rendim
 
 *(Ejecutar los notebooks individuales para ver cada set de métricas)*
 
-![Comparación de Métricas](img/plot_metrics_comparison.png)
+![Comparación de Métricas](img/metricas-comparacion.png)
 
 ## 6. Conclusiones Técnicas
 
@@ -87,12 +97,33 @@ Este gráfico de barras (ensamblado) permite una comparación directa del rendim
     * Para **máximo rendimiento** en la detección, el **SVM (kernel RBF)** es la opción recomendada.
     * Para un sistema que requiera **explicabilidad** y reglas de negocio claras, el **Árbol de Decisión** es la mejor elección.
 
-### Extra: Interpretabilidad del Árbol de Decisión
 
-El siguiente gráfico (generado por `modelo-arbol-decision.ipynb`) muestra las reglas de decisión de los primeros 3 niveles del árbol.
-
-*(Resultado de `modelo-arbol-decision.ipynb`)*
-
-![Árbol de Decisión](img/plot_decision_tree.png)
 
 ## 7. Estructura del Repositorio y Ejecución
+
+```
+/
+│
+├── dataset/
+│   └── preprocessed/
+│       ├── Event_occurrence_matrix.csv
+│       └── anomaly_label.csv
+│
+├── img/
+│   ├── distribucion-clases.png
+│   ├── mc-arbol-decision.png
+│   ├── mc-regresion-logistica.png
+│   ├── mc-svm.png
+│   └── metricas-comparacion.png
+│
+├── modelo-arbol-decision.ipynb     <-- (Ejecutar para Modelo 1)
+├── modelo-svm.ipynb                <-- (Ejecutar para Modelo 2)
+├── modelo-regresion-logistica.ipynb <-- (Ejecutar para Modelo 3)
+└── README.md                       <-- (Este archivo)
+```
+
+**Para ejecutar:**
+
+1.  Asegúrate de tener las bibliotecas `pandas`, `numpy`, `matplotlib`, `seaborn` y `scikit-learn` instaladas.
+2.  Ejecutar cada uno de los tres notebooks (`.ipynb`) de forma individual para replicar los resultados de cada modelo.
+3.  Los resultados agregados se resumen en la Tabla 5.1 y en las Conclusiones de este documento.
