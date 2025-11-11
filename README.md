@@ -13,7 +13,7 @@
 ## 1. Formación de Equipos y Elección del Dataset
 
 * **Repositorio:** Este repositorio contiene todo el código fuente y la documentación del proyecto.
-* **Dataset:** Se utiliza el dataset de logs de HDFS, el cual consiste en dos archivos principales:
+* **Dataset:** Se utiliza el [dataset de logs de HDFS](https://www.kaggle.com/datasets/platform934/hdfs-log-dataset?resource=download), el cual consiste en dos archivos principales:
     1.  `Event_occurrence_matrix.csv`: Una matriz donde cada fila es un "Bloque" (BlockId) y cada columna es un evento (`E1`, `E2`, ...). El valor es la cantidad de veces que ese evento ocurrió en ese bloque.
     2.  `anomaly_label.csv`: Un archivo que etiqueta cada `BlockId` como `Normal` o `Anomalous`.
 
